@@ -9,7 +9,7 @@ install:
   - sudo make
   - sudo cp libgtest* /usr/lib/
 
-before-script: cmake
+before-script: cmake .
 
 script:
   - make
