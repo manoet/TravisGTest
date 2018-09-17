@@ -10,8 +10,7 @@ install:
   - sudo cp libgtest* /usr/lib
   - cd ..
 
-before-script: cmake .
-
 script:
+  - cmake .
   - make
   - ./ts_travis_gtest
