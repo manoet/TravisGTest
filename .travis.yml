@@ -1,0 +1,16 @@
+language: cpp
+
+install:
+  - sudo apt-get install -y libgtest-dev
+  - cd /usr/src/googletest/googletest
+  - sudo mkdir build
+  - cd build
+  - sudo cmake ..
+  - sudo make
+  - sudo cp libgtest* /usr/lib/
+
+before-script: cmake
+
+script:
+  - make
+  - ./ts_travis_gtest
